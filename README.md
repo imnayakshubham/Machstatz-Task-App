@@ -8,4 +8,4 @@ You will also see any lint errors in the console.
 
 ### Deployment
 
-This section has moved here: https://machstatz-task-app.herokuapp.com/
+Deployed at : https://machstatz-task-app.herokuapp.com/
