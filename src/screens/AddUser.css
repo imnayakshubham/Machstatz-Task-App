@@ -1,0 +1,27 @@
+.btncontainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.inputcontainer {
+  margin: 1rem;
+}
+.btn,
+.cancelbtn {
+  width: 10rem;
+  padding: 1rem;
+  margin: 0.75rem;
+  font-size: large;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: rgb(0, 155, 216);
+  color: #fff;
+}
+.btn:hover {
+  background-color: green;
+  color: #fff;
+}
+.cancelbtn:hover {
+  background-color: rgb(255, 0, 0);
+  color: #fff;
+}

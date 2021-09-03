@@ -1,0 +1,52 @@
+.grid-item {
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  background-color: #fff;
+}
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.deleteuser {
+  display: flex;
+  justify-content: flex-end;
+}
+.circle {
+  margin-right: 0.5rem;
+  height: 50px;
+  width: 50px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: center;
+  border-radius: 50%;
+  background: rgb(0, 0, 0);
+  color: #fff;
+}
+.usernamecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.firstchar {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pen {
+  font-size: 1.5em;
+}
+.trash {
+  font-size: 1.5em;
+  color: red;
+}
+.iconscontainer {
+  display: flex;
+  justify-content: space-between;
+}
+i {
+  margin: 0.5rem;
+}

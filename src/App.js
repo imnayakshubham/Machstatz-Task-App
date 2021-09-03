@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+import User from "./screens/User";
+import AddUser from "./screens/AddUser";
 
 function App() {
+  const [userdata, setuserdata] = useState([]);
+  const getalluserdata = async () => {
+    const response = await axios.get(
+      "http://3.6.93.159:7883/machstatz/get_all_users"
+    );
+    // const response = await fetch(
+    //   "https://3.6.93.159:7883/machstatz/get_all_users"
+    // );
+    // response = response.json();
+    setuserdata(response.data);
+    return response.data;
+  };
+  useEffect(async () => {
+    await getalluserdata();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <div className="grid-container">
+          {userdata.map((user) => (
+            <div key={user._id.$oid}>
+              <User user={user} getalluserdata={getalluserdata} />
+            </div>
+          ))}
+        </div>
+      </div>
+      <AddUser getalluserdata={getalluserdata} />
+    </>
   );
 }
 
